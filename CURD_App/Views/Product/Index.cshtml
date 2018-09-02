@@ -1,0 +1,32 @@
+﻿@model IEnumerable<CURD_App.Models.Product>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h2>Product</h2>
+    <p>The list of available products</p>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td><b>Sl NO.</b></td>
+                <td><b>Product Name</b></td>
+                <td><b>Price</b></td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(m => item.Product_Id)</td>
+                    <td>@Html.DisplayFor(m => item.Product_Name)</td>
+                    <td>@Html.DisplayFor(m => item.Product_Price)</td>
+                    <td>
+                        <a>Edit</a>|<a>Details</a>|<a>Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

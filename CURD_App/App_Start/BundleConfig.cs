@@ -24,7 +24,7 @@ namespace CURD_App
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/BootstrapLumen.css",
                       "~/Content/site.css"));
         }
     }
